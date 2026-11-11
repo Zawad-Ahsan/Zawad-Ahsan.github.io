@@ -157,4 +157,13 @@
     }
   });
 
+  // phones start with three projects; the button shows the rest
+  const showAll = $('.show-all'), bento = $('.bento');
+  if (showAll && bento) showAll.addEventListener('click', () => {
+    bento.classList.add('all');
+    showAll.setAttribute('aria-expanded', 'true');
+    const first = $('.pj.more', bento);
+    if (first) { first.classList.add('in'); first.setAttribute('tabindex', '-1'); first.focus({ preventScroll: true }); }
+  });
+
 })();

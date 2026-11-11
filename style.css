@@ -156,7 +156,8 @@ strong { font-weight: var(--w-s); }
 .pj-img { display: block; height: 250px; overflow: hidden; background: #ffffff; }
 .w4 .pj-img { height: 310px; }
 .pj-img img { width: 100%; height: 100%; object-fit: cover; object-position: left top; transition: transform .7s var(--ease); }
-.pj-img.fig img { object-fit: contain; object-position: center; padding: var(--sp-2); }
+.pj-img.fig { background: var(--card-face); }
+.pj-img.fig img { object-fit: contain; object-position: center; padding: var(--sp-2); mix-blend-mode: multiply; }
 .pj-img:hover { opacity: 1; }
 .pj-img:hover img { transform: scale(1.04); }
 .pj-body { padding: var(--sp-3); display: flex; flex-direction: column; gap: var(--sp-1); flex: 1; }
@@ -164,6 +165,10 @@ strong { font-weight: var(--w-s); }
 .pj-body .tags { margin-top: var(--sp-1); }
 .pj-body > .link, .pj-links { margin-top: auto; padding-top: var(--sp-2); align-self: flex-start; }
 .pj-links { display: flex; flex-wrap: wrap; gap: var(--sp-1) var(--sp-3); }
+.pj-quote { background: var(--sec-bg); padding: var(--sp-2); margin-top: var(--sp-1); max-width: 62ch; }
+.pj-quote p { font-weight: var(--w-s); }
+.pj-quote footer { color: var(--sec-muted); font-size: var(--s-small); margin-top: var(--sp-1); }
+.show-all { display: none; }
 
 /* ---------- games ---------- */
 .game { display: grid; grid-template-columns: 7fr 5fr; gap: var(--sp-5); align-items: center; }
@@ -273,6 +278,10 @@ strong { font-weight: var(--w-s); }
 @media (max-width: 640px) {
   :root { --sp-6: 56px; --sp-5: 40px; --sp-4: 32px; --s-mark: 24vw; }
   .hero { min-height: 0; grid-template-rows: 40svh auto; }
+  .hero-photo img, .hero-photo img.alt { object-position: 12% 100%; transform: scale(1.38); transform-origin: 8% 100%; }
+  .bento:not(.all) .pj.more { display: none; }
+  .show-all { display: flex; width: 100%; margin-top: var(--sp-3); }
+  .bento.all + .show-all { display: none; }
   .wordmark, .fword { white-space: normal; }
   .wordmark span, .fword span { display: block; width: max-content; }
   .hero-row { flex-direction: column; align-items: stretch; }
