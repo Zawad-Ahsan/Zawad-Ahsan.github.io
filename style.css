@@ -182,7 +182,6 @@ strong { font-weight: var(--w-s); }
 .game h3 { font-size: calc(var(--s-head) * var(--head-k)); line-height: 1; }
 .meta { color: var(--sec-muted); margin: var(--sp-1) 0 var(--sp-2); }
 .game p:not(.meta) { margin-bottom: var(--sp-3); }
-.player { margin-top: var(--sp-5); padding: var(--sp-3); background: var(--sec-surface); }
 
 /* ---------- skills ---------- */
 .logos { list-style: none; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--sp-1); }
