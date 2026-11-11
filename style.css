@@ -86,7 +86,11 @@ strong { font-weight: var(--w-s); }
 .wordmark, .fword { font-family: var(--f-d); font-weight: var(--w-d); letter-spacing: var(--tr-d); text-transform: var(--case-d); font-size: var(--s-mark); line-height: .88; white-space: nowrap; }
 .hero-row { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); margin-top: var(--sp-3); }
 .hero-line { max-width: 50ch; }
-.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2) var(--sp-3); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-1); }
+.icon-link { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: var(--sec-surface); color: inherit; transition: transform .35s var(--ease), background-color .25s var(--ease), color .25s var(--ease); }
+.icon-link svg { width: 22px; height: 22px; fill: currentColor; }
+.icon-link:hover { opacity: 1; transform: translateY(-3px); background: var(--btn-bg); color: var(--btn-ink); }
+.icon-link:active { transform: scale(.95); }
 
 /* ---------- intro ---------- */
 .intro-grid { display: grid; grid-template-columns: 4fr 8fr; gap: var(--sp-5); align-items: end; }
@@ -247,7 +251,7 @@ strong { font-weight: var(--w-s); }
   .intro-grid, .split-head, .magic-grid, .game, .choose-grid, .edu-grid, .contact-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
   .edu-grid, .contact-grid { gap: var(--sp-5); }
   .edu-grid > div:first-child { order: 2; }
-  .intro-photo img { max-width: 300px; }
+  .intro-photo img { max-width: 300px; margin-inline: auto; object-position: center bottom; }
   .game.flip .shot { order: 0; }
   .facts { grid-template-columns: 1fr 1fr; }
   .deck { max-width: 600px; }
@@ -269,7 +273,8 @@ strong { font-weight: var(--w-s); }
   .hero { min-height: 0; grid-template-rows: 40svh auto; }
   .wordmark, .fword { white-space: normal; }
   .wordmark span, .fword span { display: block; width: max-content; }
-  .hero-row { flex-direction: column; align-items: flex-start; }
+  .hero-row { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { flex: 1 1 auto; }
   .statement { font-size: var(--s-lead); }
   .facts a { padding: var(--sp-2); }
   .deck { gap: var(--sp-1); }
@@ -299,5 +304,6 @@ strong { font-weight: var(--w-s); }
   .topnav { gap: var(--sp-1); }
   .brand { font-size: 1.05rem; }
   .btn-s { padding: 0 10px; }
+  .hero-actions .btn { flex-basis: 100%; }
   .details th, .details td { padding: 10px var(--sp-1); }
 }
