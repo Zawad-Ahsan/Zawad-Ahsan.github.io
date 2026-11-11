@@ -180,7 +180,7 @@ strong { font-weight: var(--w-s); }
 .player { margin-top: var(--sp-5); padding: var(--sp-3); background: var(--sec-surface); }
 
 /* ---------- skills ---------- */
-.logos { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: var(--sp-1); }
+.logos { list-style: none; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--sp-1); }
 .logos li { background: var(--sec-surface); padding: var(--sp-2); display: flex; flex-direction: column; gap: 10px; font-size: var(--s-small); transition: transform .35s var(--ease); }
 .logos li:hover { transform: translateY(-4px); }
 .logos svg { width: 28px; height: 28px; fill: currentColor; }
@@ -215,6 +215,7 @@ strong { font-weight: var(--w-s); }
 .contact-grid > * { min-width: 0; }
 .contact-grid h2 { margin-bottom: var(--sp-3); }
 .details { margin-top: var(--sp-3); }
+.socials { display: flex; gap: var(--sp-1); margin-top: var(--sp-2); }
 .details th, .details td { text-align: left; vertical-align: top; padding: 10px var(--sp-2); font-weight: 400; }
 .details th { color: var(--sec-muted); width: 32%; }
 .details tr:nth-child(odd) > * { background: var(--sec-surface); }
@@ -246,11 +247,12 @@ strong { font-weight: var(--w-s); }
   .topnav ul { display: none; position: absolute; top: var(--nav-h); left: 0; right: 0; margin: 0; flex-direction: column; gap: 0; background: var(--bg); padding: var(--sp-1) var(--m) var(--sp-3); }
   .topnav ul.open { display: flex; }
   .topnav ul a { display: block; padding: 12px 0; font-size: var(--s-lead); }
+  .logos { grid-template-columns: repeat(6, 1fr); }
 }
 @media (max-width: 960px) {
   .intro-grid, .split-head, .magic-grid, .game, .choose-grid, .edu-grid, .contact-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
-  .edu-grid, .contact-grid { gap: var(--sp-5); }
-  .edu-grid > div:first-child { order: 2; }
+  .edu-grid { gap: var(--sp-6); }
+  .contact-grid { gap: var(--sp-5); }
   .intro-photo img { max-width: 300px; margin-inline: auto; object-position: center bottom; }
   .game.flip .shot { order: 0; }
   .facts { grid-template-columns: 1fr 1fr; }
