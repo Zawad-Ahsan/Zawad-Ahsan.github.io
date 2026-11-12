@@ -185,8 +185,7 @@ strong { font-weight: var(--w-s); }
 
 /* ---------- skills ---------- */
 .logos { list-style: none; display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--sp-1); }
-.logos li { background: var(--sec-surface); padding: var(--sp-2); display: flex; flex-direction: column; gap: 10px; font-size: var(--s-small); transition: transform .35s var(--ease); }
-.logos li:hover { transform: translateY(-4px); }
+.logos li { background: var(--sec-surface); padding: var(--sp-2); display: flex; flex-direction: column; gap: 10px; font-size: var(--s-small); }
 .logos svg { width: 28px; height: 28px; fill: currentColor; }
 .skill-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); margin-top: var(--sp-4); }
 .skill-list dt { font-weight: var(--w-s); font-size: var(--s-lead); letter-spacing: -0.02em; margin-bottom: var(--sp-1); }
@@ -236,6 +235,16 @@ strong { font-weight: var(--w-s); }
 .form-error { font-weight: var(--w-s); }
 .fword { margin: var(--sp-5) var(--m) 0; }
 .legal { font-size: var(--s-small); color: var(--sec-muted); margin: var(--sp-2) var(--m) 0; }
+.legal a, .form-note a { display: inline-block; padding: 7px 0; }
+
+/* ---------- privacy page ---------- */
+.back { margin-left: auto; }
+.policy { min-height: calc(100svh - var(--nav-h)); }
+.prose { max-width: calc(68ch + 2 * var(--m)); margin-left: 0; }
+.page-title { font-size: calc(var(--s-head) * var(--head-k)); line-height: var(--lh-d); margin-bottom: var(--sp-3); }
+.prose h2 { font-family: var(--f-t); font-weight: var(--w-s); font-size: var(--s-lead); line-height: 1.15; letter-spacing: -0.02em; margin: var(--sp-4) 0 var(--sp-1); }
+.prose p + p { margin-top: var(--sp-2); }
+.prose .updated { color: var(--sec-muted); font-size: var(--s-small); margin-top: var(--sp-4); }
 
 /* ---------- motion ---------- */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
