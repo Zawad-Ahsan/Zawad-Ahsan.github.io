@@ -168,6 +168,7 @@ strong { font-weight: var(--w-s); }
 .pj-quote { background: var(--sec-bg); padding: var(--sp-2); margin-top: var(--sp-1); max-width: 62ch; }
 .pj-quote p { font-weight: var(--w-s); }
 .pj-quote footer { color: var(--sec-muted); font-size: var(--s-small); margin-top: var(--sp-1); }
+.pj-quote footer a { display: inline-block; padding: 3px 0; }
 .show-all { display: none; }
 
 /* ---------- games ---------- */
